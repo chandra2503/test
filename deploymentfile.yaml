@@ -21,8 +21,8 @@ spec:
 
     spec:
       containers:
-        - name: myapp1
-          image: chandrakalaj/myapp1:latest
+        - name: myapp
+          image: chandrakalaj/myapp:latest
           imagePullPolicy: Always
 
           ports:
