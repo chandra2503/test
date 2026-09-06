@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNCK Academia | Mini & Major Project Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-nav">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <div class="logo-group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="logo-text">VNCK <span class="highlight">Academia</span></span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="desktop-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#projects" class="btn btn-primary btn-sm">Browse Projects</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <div class="mobile-menu-footer">
+                <a href="#projects" class="btn btn-primary w-full text-center">Browse Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-bg-decor">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Top Quality Academic Projects
+            </div>
+            <h1 class="hero-title">
+                Elevate Your <span class="gradient-text">Academic Journey</span>
+            </h1>
+            <p class="hero-subtitle">
+                Discover ready-to-deploy, high-quality mini and major projects tailored for school and college students. Complete with fully-structured documentation and modular source code.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-primary btn-lg flex-center gap-2">
+                    Explore Projects <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline btn-lg flex-center gap-2">
+                    Request Custom Project
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Portfolio Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="accent-line"></div>
+                <p>Explore our curated selection of top-tier academic projects, categorized by scale to suit your curriculum requirements.</p>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards are injected dynamically by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Project Modal Overlay -->
+    <div id="project-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div id="modal-body-content">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Feedback Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-grid">
+                    
+                    <!-- Contact Info Column -->
+                    <div class="contact-info-panel">
+                        <div class="decor-circle circle-1"></div>
+                        <div class="decor-circle circle-2"></div>
+                        
+                        <div class="info-content">
+                            <h3>Get in Touch</h3>
+                            <p class="info-subtext">Need a customized project implementation or have questions about our existing portfolio? Reach out directly.</p>
+                            
+                            <div class="contact-methods">
+                                <div class="method-item">
+                                    <div class="method-icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Office Address</h4>
+                                        <p>Near Venkateshwara ITI College,<br>BM Road, Chennapattana Circle, Hassan,<br>Karnataka 573201, India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-item">
+                                    <div class="method-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Phone Lines</h4>
+                                        <p>+91 7829162665</p>
+										<p>+91 9844475975</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-item">
+                                    <div class="method-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Email Correspondence</h4>
+                                        <p>tesyssolutions@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-panel">
+                            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-panel">
+                        <h3>Send us a message</h3>
+                        <form id="contact-form">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" required placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required placeholder="john@student.edu">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectType">I am looking for</label>
+                                <select id="projectType">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="mini">Mini Project Help</option>
+                                    <option value="major">Major Project Customization</option>
+                                    <option value="custom">Brand New Custom Project</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message Details</label>
+                                <textarea id="message" rows="4" required placeholder="Tell us about your project requirements, tech preferences, or university guidelines..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg flex-center gap-2 group-btn">
+                                Send Message
+                                <i class="fa-solid fa-paper-plane send-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>VNCK AcademiaHub</span>
+            </div>
+            <p class="copyright">© 2026 VNCK AcademiaHub Projects. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- JS Logic -->
+	<script src="project.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
