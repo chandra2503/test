@@ -5,7 +5,7 @@ metadata:
   name: devops-service
 
 spec:
-  type: ClusterIP
+  type: NodePort
 
   selector:
     app: my-app
@@ -13,4 +13,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 30555
+      targetPort: 80
+      nodePort: 30555
