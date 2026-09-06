@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/chandra2503/deployment.git'
+                    url: 'https://github.com/chandra2503/test.git'
             }
         }
 
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                     docker build \
-                    -t chandrakalaj/myapp1:${BUILD_NUMBER} .
+                    -t chandrakalaj/myapp:${BUILD_NUMBER} .
                 '''
             }
         }
@@ -40,7 +40,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 sh '''
-                    docker push chandrakalaj/myapp1:${BUILD_NUMBER}
+                    docker push chandrakalaj/myapp:${BUILD_NUMBER}
                 '''
             }
         }
@@ -61,7 +61,7 @@ pipeline {
                 sh '''
                     microk8s kubectl set image \
                     deployment/nginx-deployment \
-                    myapp1=chandrakalaj/myapp1:${BUILD_NUMBER}
+                    myapp=chandrakalaj/myapp:${BUILD_NUMBER}
                 '''
             }
         }
